@@ -21,7 +21,7 @@
 - [2024.06] This repo is created.
 
 ## 🎬 Overview
-![overview](asserts\framework.jpg)
+![overview](asserts/framework.jpg)
 
 
 ## 📷 Benchmark Results
