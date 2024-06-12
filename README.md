@@ -17,20 +17,49 @@
 
 </div>
 
-## 🔥 Update
+## 🔥 News
 - [2024.06] This repo is created.
 
 ## 🎬 Overview
 ![overview](asserts/framework.jpg)
 
 
-## 📷 Benchmark Results
+## 📷 Results
 ![benchmark](asserts/benchmark.jpg)
+
+<details>
+<summary>Quantitative Comparisons (click to expand)</summary>
+
+<p align="center">
+  <img width="900" src="asserts/tab_main.png">
+</p>
+
+<p align="center">
+  <img width="900" src="asserts/tab_main_gan.png">
+</p>
+</details>
+
+<details>
+<summary>Visual Comparisons (click to expand)</summary>
+
+<p align="center">
+  <img width="900" src="asserts/fig_main.png">
+</p>
+
+<p align="center">
+  <img width="900" src="asserts/fig_main_gan.png">
+</p>
+</details>
 
 
 ## 📧 Contact
 If you have any questions, please feel free to contact: `rong-yuan.wu@connect.polyu.hk`
 
+
+
+## 📌 TODO
+
+* [ ] Release code and pretrained models
 
 
 <details>
