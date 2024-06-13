@@ -1,7 +1,7 @@
 <div align="center">
 
 
-<h1>OSEDiff: One-Step Effective Diffusion Network for Real-World Image Super-Resolution</h1>
+<h1>One-Step Effective Diffusion Network for Real-World Image Super-Resolution</h1>
 
 <div>
     <a href='https://scholar.google.com/citations?user=A-U8zE8AAAAJ&hl=zh-CN' target='_blank'>Rongyuan Wu<sup>1,2,*</sup></a>&emsp;
@@ -59,8 +59,20 @@ If you have any questions, please feel free to contact: `rong-yuan.wu@connect.po
 
 ## 📌 TODO
 
-* [ ] Release code and pretrained models
+* [ ] Release code and pretrained model
 
+## 🎓Citations
+<!-- If our code helps your research or work, please consider citing our paper.
+The following are BibTeX references: -->
+
+```
+@article{wu2024one,
+  title={One-Step Effective Diffusion Network for Real-World Image Super-Resolution},
+  author={Wu, Rongyuan and Sun, Lingchen and Ma, Zhiyuan and Zhang, Lei},
+  journal={arXiv preprint arXiv:2406.08177},
+  year={2024}
+}
+```
 
 <details>
 <summary>statistics</summary>
