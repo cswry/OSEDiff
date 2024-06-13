@@ -13,6 +13,8 @@
     <sup>1</sup>The Hong Kong Polytechnic University, <sup>2</sup>OPPO Research Institute&emsp; 
 </div>
 
+[[paper]](https://arxiv.org/pdf/2406.08177v1)
+
 ---
 
 </div>
@@ -59,7 +61,7 @@ If you have any questions, please feel free to contact: `rong-yuan.wu@connect.po
 
 ## 📌 TODO
 
-* [ ] Release code and pretrained model
+* [ ] Release codes and model
 
 ## 🎓Citations
 <!-- If our code helps your research or work, please consider citing our paper.
