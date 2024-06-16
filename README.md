@@ -22,6 +22,10 @@
 ## 🔥 News
 - [2024.06] This repo is created.
 
+## 📌 TODO
+
+* [ ] Release codes and model by July 2024
+
 ## 🎬 Overview
 ![overview](asserts/framework.jpg)
 
@@ -57,11 +61,6 @@
 ## 📧 Contact
 If you have any questions, please feel free to contact: `rong-yuan.wu@connect.polyu.hk`
 
-
-
-## 📌 TODO
-
-* [ ] Release codes and model
 
 ## 🎓Citations
 <!-- If our code helps your research or work, please consider citing our paper.
