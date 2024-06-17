@@ -13,7 +13,7 @@
     <sup>1</sup>The Hong Kong Polytechnic University, <sup>2</sup>OPPO Research Institute&emsp; 
 </div>
 
-[[paper]](https://arxiv.org/pdf/2406.08177v1)
+[[paper]](https://arxiv.org/pdf/2406.08177v2)
 
 ---
 
@@ -81,3 +81,5 @@ The following are BibTeX references: -->
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=cswry/OSEDiff)
 
 </details>
+
+
