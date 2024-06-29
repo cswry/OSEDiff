@@ -22,10 +22,6 @@
 ## 🔥 News
 - [2024.06] This repo is created.
 
-## 📌 TODO
-
-* [ ] Release codes and model by July 2024
-
 ## 🎬 Overview
 ![overview](asserts/framework.jpg)
 
