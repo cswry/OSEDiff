@@ -1,0 +1,11 @@
+diffusers==0.25.0
+torch==2.0.1
+transformers==4.28.1
+xformers==0.0.20
+einops==0.7.0
+open-clip-torch==2.20.0
+peft==0.9.0
+Pillow==9.5.0
+PyYAML==6.0
+loralib
+fairscale

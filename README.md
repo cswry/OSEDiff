@@ -26,7 +26,42 @@
 ![overview](asserts/framework.jpg)
 
 
+## 🔧 Dependencies and Installation
+
+1. Clone repo
+    ```bash
+    git clone https://github.com/cswry/OSEDiff.git
+    cd OSEDiff
+    ```
+
+2. Install dependent packages
+    ```bash
+    conda create -n OSEDiff python=3.10 -y
+    conda activate OSEDiff
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+
+3. Download Models 
+#### Dependent Models
+* [SD21 Base](https://huggingface.co/stabilityai/stable-diffusion-2-1-base)
+* [RAM](https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/ram_swin_large_14m.pth)
+* [DAPE](https://drive.google.com/file/d/1KIV6VewwO2eDC9g4Gcvgm-a0LDI7Lmwm/view?usp=drive_link)
+
+
+## ⚡ Quick Inference
+```
+python test_osediff.py \
+-i preset/datasets/test_dataset/input \
+-o preset/datasets/test_dataset/output \
+--osediff_path preset\models\osediff.pkl \
+--pretrained_model_name_or_path SD21BASE_PATH \
+--ram_ft_path DAPE_PATH \
+--ram_path RAM_PATH
+```
+
 ## 📷 Results
+
 ![benchmark](asserts/benchmark.jpg)
 
 <details>
