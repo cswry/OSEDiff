@@ -36,22 +36,27 @@ def get_validation_prompt(args, image, model, device='cuda'):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input_image', '-i', type=str, default=None, help='path to the input image')
-    parser.add_argument('--output_dir', '-o', type=str, default=None, help='the directory to save the output')
-    parser.add_argument('--pretrained_model_name_or_path', type=str, default=None, help='path to a model state dict to be used')
+    parser.add_argument('--input_image', '-i', type=str, default='preset/datasets/test_dataset/input', help='path to the input image')
+    parser.add_argument('--output_dir', '-o', type=str, default='preset/datasets/test_dataset/output', help='the directory to save the output')
+    parser.add_argument('--pretrained_model_name_or_path', type=str, default=None, help='sd model path')
     parser.add_argument('--seed', type=int, default=42, help='Random seed to be used')
     parser.add_argument("--process_size", type=int, default=512)
     parser.add_argument("--upscale", type=int, default=4)
     parser.add_argument("--align_method", type=str, choices=['wavelet', 'adain', 'nofix'], default='adain')
-    parser.add_argument("--osediff_path", type=str, default=None)
+    parser.add_argument("--osediff_path", type=str, default='preset/models/osediff.pkl')
     parser.add_argument('--prompt', type=str, default='', help='user prompts')
     parser.add_argument('--ram_path', type=str, default=None)
     parser.add_argument('--ram_ft_path', type=str, default=None)
     parser.add_argument('--save_prompts', type=bool, default=True)
     # precision setting
-    parser.add_argument("--mixed_precision", type=str, default="fp16")
+    parser.add_argument("--mixed_precision", type=str, choices=['fp16', 'fp32'], default="fp16")
     # merge lora
-    parser.add_argument("--merge_and_unload_lora", default=False) 
+    parser.add_argument("--merge_and_unload_lora", default=False) # merge lora weights before inference
+    # tile setting
+    parser.add_argument("--vae_decoder_tiled_size", type=int, default=224) 
+    parser.add_argument("--vae_encoder_tiled_size", type=int, default=1024) 
+    parser.add_argument("--latent_tiled_size", type=int, default=96) 
+    parser.add_argument("--latent_tiled_overlap", type=int, default=32) 
 
     args = parser.parse_args()
 
@@ -76,8 +81,6 @@ if __name__ == "__main__":
     weight_dtype = torch.float32
     if args.mixed_precision == "fp16":
         weight_dtype = torch.float16
-    elif args.mixed_precision == "bf16":
-        weight_dtype = torch.bfloat16
 
     # set weight type
     DAPE = DAPE.to(dtype=weight_dtype)

@@ -20,6 +20,7 @@
 </div>
 
 ## 🔥 News
+- [2024.07] Release OSEDiff-SD21base.
 - [2024.06] This repo is created.
 
 ## 🎬 Overview
