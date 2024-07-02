@@ -258,7 +258,7 @@ class AutoencoderKL(ModelMixin, ConfigMixin, FromOriginalVAEMixin):
         else:
             h = self.encoder(x)
 
-        moments = self.quant_conv(h)
+        moments = self.quant_conv(h.to(dtype=self.quant_conv.weight.dtype))
         posterior = DiagonalGaussianDistribution(moments)
 
         if not return_dict:
