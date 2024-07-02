@@ -61,6 +61,7 @@ python test_osediff.py \
 ```
 
 ## 📷 Results
+[<img src="asserts/compare_01.png" height="400px"/>](https://imgsli.com/Mjc1ODI1) [<img src="asserts/compare_02.png" height="400px"/>](https://imgsli.com/Mjc1ODMx)
 
 ![benchmark](asserts/benchmark.jpg)
 
