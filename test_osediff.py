@@ -28,11 +28,11 @@ ram_transforms = transforms.Compose([
 def get_validation_prompt(args, image, model, device='cuda'):
     validation_prompt = ""
     lq = tensor_transforms(image).unsqueeze(0).to(device)
-    lq = ram_transforms(lq).to(dtype=weight_dtype)
-    captions = inference(lq, model)
+    lq_ram = ram_transforms(lq).to(dtype=weight_dtype)
+    captions = inference(lq_ram, model)
     validation_prompt = f"{captions[0]}, {args.prompt},"
     
-    return validation_prompt
+    return validation_prompt, lq
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -110,7 +110,7 @@ if __name__ == "__main__":
         bname = os.path.basename(image_name)
 
         # get caption
-        validation_prompt = get_validation_prompt(args, input_image, DAPE)
+        validation_prompt, lq = get_validation_prompt(args, input_image, DAPE)
         if args.save_prompts:
             txt_save_path = f"{txt_path}/{bname.split('.')[0]}.txt"
             with open(txt_save_path, 'w', encoding='utf-8') as f:
@@ -120,7 +120,7 @@ if __name__ == "__main__":
 
         # translate the image
         with torch.no_grad():
-            lq = F.to_tensor(input_image).unsqueeze(0).cuda()*2-1
+            lq = lq*2-1
             output_image = model(lq, prompt=validation_prompt)
             output_pil = transforms.ToPILImage()(output_image[0].cpu() * 0.5 + 0.5)
             if args.align_method == 'adain':

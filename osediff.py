@@ -87,7 +87,7 @@ class OSEDiff_test(torch.nn.Module):
         prompt_embeds = torch.concat(prompt_embeds_list, dim=0)
         return prompt_embeds
 
-    @perfcount
+    # @perfcount
     @torch.no_grad()
     def forward(self, lq, prompt):
 

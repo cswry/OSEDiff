@@ -675,7 +675,7 @@ class VAEHook:
 
         raise IndexError('Should not reach here')
 
-    @perfcount
+    # @perfcount
     @torch.no_grad()
     def vae_tile_forward(self, z):
         """
