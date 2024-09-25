@@ -90,6 +90,8 @@ python test_osediff.py \
 </p>
 </details>
 
+## 🎫 License
+This project is released under the [Apache 2.0 license](LICENSE).
 
 ## 📧 Contact
 If you have any questions, please feel free to contact: `rong-yuan.wu@connect.polyu.hk`
