@@ -69,6 +69,8 @@ python test_osediff.py \
 
 ![benchmark](asserts/benchmark.jpg)
 
+* For convenient evaluation and comparison, we have published the test results of DIV2K_val, RealSR, and DRealSR on [Google Drive](https://drive.google.com/file/d/1WWYVholKl6f-Ef4g5starGFsB2X79Pqe/view?usp=sharing).
+
 <details>
 <summary>Quantitative Comparisons (click to expand)</summary>
 
