@@ -7,7 +7,9 @@ CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff.py \
     --mixed_precision='fp16' \
     --report_to "tensorboard" \
     --seed 123 \
-    --output_dir=YOUR EXP DIR PATH \
+    --output_dir=experience/osediff \
+    --dataset_txt_paths_list 'YOUR TXT FILE PATH','YOUR TXT FILE PATH' \
+    --dataset_prob_paths_list 1,1 \
     --neg_prompt="painting, oil painting, illustration, drawing, art, sketch, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, messy, worst quality, low quality, frames, watermark, signature, jpeg artifacts, deformed, lowres, over-smooth" \
     --cfg_vsd=7.5 \
     --lora_rank=4 \
