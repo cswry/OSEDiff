@@ -88,7 +88,7 @@ Average inference time per iteration: 0.1046 seconds.
 ```
 
 ## 📏 Benchmark Results
-For convenient comparison, we provide OSEDiff's test results on the RealSR benchmark and DrealSR benchmark in the `preset/datasets/benchmark_realsr/results_osediff` and `preset/datasets/benchmark_drealsr/results_osediff` directory. These benchmarks were directly copied from [StableSR](https://huggingface.co/datasets/Iceclear/StableSR-TestSets?row=0). Additionally, we also provide a script for testing IQA (Image Quality Assessment).
+For convenient comparison, we provide OSEDiff's test results on the RealSR benchmark and DrealSR benchmark in the `preset/datasets/benchmark_realsr/results_osediff` and `preset/datasets/benchmark_drealsr/results_osediff` directory. For the DIV2K validation benchmark, due to the large number of images, we have uploaded the test results to [Google Drive](https://drive.google.com/file/d/1WWYVholKl6f-Ef4g5starGFsB2X79Pqe/view?usp=sharing). These benchmarks were directly copied from [StableSR](https://huggingface.co/datasets/Iceclear/StableSR-TestSets?row=0). Additionally, we also provide a script for testing IQA (Image Quality Assessment).
 ```
 python test_metrics.py \
 --inp_imgs preset/datasets/benchmark_realsr/results_osediff \
