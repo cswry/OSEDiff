@@ -7,5 +7,7 @@ open-clip-torch==2.20.0
 peft==0.9.0
 Pillow==9.5.0
 PyYAML==6.0
+pyiqa==0.1.10
+basicsr
 loralib
 fairscale
