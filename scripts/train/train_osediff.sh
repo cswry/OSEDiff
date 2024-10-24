@@ -1,5 +1,6 @@
 CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff.py \
     --pretrained_model_name_or_path=SD21BASE_PATH \
+    --ram_path=RAM_PATH \
     --learning_rate=5e-5 \
     --train_batch_size=4 \
     --gradient_accumulation_steps=1 \

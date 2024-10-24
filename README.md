@@ -124,11 +124,12 @@ LSDIR/HR_merge/0000002.png
 ```
 
 #### Step2: Training for OSEDiff
-Pleasr put your txt file path at `YOUR TXT FILE PATH`
+Pleasr put your txt file path at `YOUR TXT FILE PATH`. If you have 4 GPUs, you can run
 
 ```
 CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff.py \
     --pretrained_model_name_or_path=SD21BASE_PATH \
+    --ram_path=RAM_PATH \
     --learning_rate=5e-5 \
     --train_batch_size=4 \
     --gradient_accumulation_steps=1 \
