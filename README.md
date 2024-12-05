@@ -23,6 +23,7 @@
 #### 🚩Accepted by NeurIPS2024
 
 ## 🔥 News
+- [2024.12] Updated OSEDiff-SD21base-face.
 - [2024.10] Updated training codes and [paper](https://arxiv.org/pdf/2406.08177). 💥💥💥Congratulations, OSEDiff has been applied to the OPPO Find X8 series!
 - [2024.07] Release OSEDiff-SD21base.
 - [2024.06] This repo is created.
@@ -57,6 +58,7 @@
 
 
 ## ⚡ Quick Inference
+For Real-World Image Super-Resolution:
 ```
 python test_osediff.py \
 -i preset/datasets/test_dataset/input \
@@ -65,6 +67,18 @@ python test_osediff.py \
 --pretrained_model_name_or_path SD21BASE_PATH \
 --ram_ft_path DAPE_PATH \
 --ram_path RAM_PATH
+```
+
+For Face Restoration:
+```
+python test_osediff.py \
+-i preset/datasets/test_dataset/input_face \
+-o preset/datasets/test_dataset/output_face \
+--osediff_path preset/models/osediff_face.pkl \
+--pretrained_model_name_or_path SD21BASE_PATH \
+--ram_ft_path DAPE_PATH \
+--ram_path RAM_PATH \
+--align_method nofix 
 ```
 
 ## 🚀 Calculate Inference Time
@@ -111,7 +125,7 @@ DrealSR benchmark:
 PSNR: 27.9243; SSIM: 0.7835; LPIPS: 0.2968; DISTS: 0.2165; CLIPIQA: 0.6963; NIQE: 6.4902; MUSIQ: 64.6537; MANIQA: 0.5895 | FID: 135.296586 | FID Runtime: 8.10 sec
 ```
 
-## 🌈 Train 
+##  1. Train for Real-World Image Super-Resolution
 #### Step1: Prepare training data
 We use LSDIR (84991) and the first 10k images from FFHQ as our training data. Please write their absolute paths into a txt file. Each line in the txt file should be the absolute path of an image. Just like:
 
@@ -150,6 +164,38 @@ CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff.py \
     --deg_file_path="params_realesrgan.yml" \
     --tracker_project_name "train_osediff"
 ```
+
+## 2. Train for Face Restoration
+#### Step1: Prepare training data
+We use FFHQ as our training data. Please follow the instructions aboved to prepare the txt file.
+
+#### Step2: Training for OSEDiff-face
+Pleasr put your txt file path at `YOUR TXT FILE PATH`. If you have 4 GPUs, you can run
+```
+CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff_face.py \
+    --pretrained_model_name_or_path=SD21BASE_PATH \
+    --ram_path=RAM_PATH \
+    --learning_rate=5e-5 \
+    --train_batch_size=4 \
+    --gradient_accumulation_steps=1 \
+    --enable_xformers_memory_efficient_attention --checkpointing_steps 500 \
+    --mixed_precision='fp16' \
+    --report_to "tensorboard" \
+    --seed 123 \
+    --output_dir=experience/osediff_face \
+    --dataset_txt_paths_list 'YOUR TXT FILE PATH','YOUR TXT FILE PATH' \
+    --dataset_prob_paths_list 1,1 \
+    --neg_prompt="blurring, dirty, messy, worst quality, low quality, frames, watermark, signature, jpeg artifacts, deformed, lowres, over-smooth" \
+    --cfg_vsd=7.5 \
+    --lora_rank=4 \
+    --lambda_lpips=2 \
+    --lambda_l2=1 \
+    --lambda_vsd=1 \
+    --lambda_vsd_lora=1 \
+    --deg_file_path="params_codeformer.yml" \
+    --tracker_project_name "train_osediff_face"
+```
+
 
 
 ## 📷 Results

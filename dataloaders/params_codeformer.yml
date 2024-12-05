@@ -1,0 +1,7 @@
+blur_kernel_size: 41
+kernel_list: ['iso', 'aniso']
+kernel_prob: [0.5, 0.5]
+blur_sigma: [1, 15]
+downsample_range: [1, 30]
+noise_range: [0, 20]
+jpeg_range: [30, 100]
