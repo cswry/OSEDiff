@@ -74,6 +74,7 @@ For Face Restoration:
 python test_osediff.py \
 -i preset/datasets/test_dataset/input_face \
 -o preset/datasets/test_dataset/output_face \
+--upscale 1 \
 --osediff_path preset/models/osediff_face.pkl \
 --pretrained_model_name_or_path SD21BASE_PATH \
 --ram_ft_path DAPE_PATH \

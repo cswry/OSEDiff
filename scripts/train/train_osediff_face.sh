@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff.py \
+CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff_face.py \
     --pretrained_model_name_or_path=SD21BASE_PATH \
     --ram_path=RAM_PATH \
     --learning_rate=5e-5 \
@@ -8,15 +8,15 @@ CUDA_VISIBLE_DEVICES="0,1,2,3," accelerate launch train_osediff.py \
     --mixed_precision='fp16' \
     --report_to "tensorboard" \
     --seed 123 \
-    --output_dir=experience/osediff \
+    --output_dir=experience/osediff_face \
     --dataset_txt_paths_list 'YOUR TXT FILE PATH','YOUR TXT FILE PATH' \
     --dataset_prob_paths_list 1,1 \
-    --neg_prompt="painting, oil painting, illustration, drawing, art, sketch, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, messy, worst quality, low quality, frames, watermark, signature, jpeg artifacts, deformed, lowres, over-smooth" \
+    --neg_prompt="blurring, dirty, messy, worst quality, low quality, frames, watermark, signature, jpeg artifacts, deformed, lowres, over-smooth" \
     --cfg_vsd=7.5 \
     --lora_rank=4 \
     --lambda_lpips=2 \
     --lambda_l2=1 \
     --lambda_vsd=1 \
     --lambda_vsd_lora=1 \
-    --deg_file_path="params_realesrgan.yml" \
-    --tracker_project_name "train_osediff"
+    --deg_file_path="params_codeformer.yml" \
+    --tracker_project_name "train_osediff_face"
