@@ -36,12 +36,15 @@
 😊 You may also want to check our new updates:
 
 1. **CCSRv2 (2024.09)** [Paper](https://arxiv.org/pdf/2401.00877v2) | [Code](https://github.com/csslc/CCSR)  
+
    Flexible and efficient diffusion sampling for super-resolution, **supporting arbitrary number of inference steps**, *e.g.*, 1~15 step(s).
 
 2. **AdcSR (2024.11)** [Paper](https://arxiv.org/pdf/2411.13383) | Code 
+
    Adversarial Diffusion Compression framework for super-resolution, **offering up to 9.3× speedup over OSEDiff**.
 
 3. **PiSA-SR (2024.12)** [Paper](https://arxiv.org/pdf/2412.03017) | [Code](https://github.com/csslc/PiSA-SR)  
+
    Adjustable diffusion network for super-resolution to meet your preference!
 
 
