@@ -31,27 +31,19 @@
 :star: If OSEDiff is helpful to your images or projects, please help star this repo. Thanks! :hugs:
 
 
-## Discover More in One-Step Image Super-Resolution
 
-We are proud to share our other research contributions on single-step image super-resolution:
 
-### **[CCSRv2](https://arxiv.org/pdf/2401.00877v2)** (2024.09)
-**[Paper](https://arxiv.org/abs/xxxx.xxxxx)** | **[Code](https://github.com/csslc/CCSR)**  
-Introduced a lightweight, real-time framework for single-step image super-resolution, targeting mobile and edge devices.
+😊 You may also want to check our new updates:
 
----
+1. **CCSRv2 (2024.09)** [Paper](https://arxiv.org/pdf/2401.00877v2) | [Code](https://github.com/csslc/CCSR)  
+   Flexible and efficient diffusion sampling for super-resolution, **supporting arbitrary number of inference steps**, *e.g.*, 1~15 step(s).
 
-### **[Diffusion-Based Single-Step SR](https://arxiv.org/abs/yyyy.yyyyy)** (2023.08)
-**[Paper](https://arxiv.org/abs/yyyy.yyyyy)** | **[Code](https://github.com/your-repo/diffusion-sr)**  
-A diffusion model tailored for single-step SR tasks, achieving state-of-the-art performance on real-world degraded images.
+2. **AdcSR (2024.11)** [Paper](https://arxiv.org/pdf/2411.13383) | Code 
+   Adversarial Diffusion Compression framework for super-resolution, **offering up to 9.3× speedup over OSEDiff**.
 
----
+3. **PiSA-SR (2024.12)** [Paper](https://arxiv.org/pdf/2412.03017) | [Code](https://github.com/csslc/PiSA-SR)  
+   Adjustable diffusion network for super-resolution to meet your preference!
 
-### **[GAN-Based Single-Step SR for Real-World Applications](https://arxiv.org/abs/zzzz.zzzzz)** (2024.01)
-**[Paper](https://arxiv.org/abs/zzzz.zzzzz)** | **[Code](https://github.com/your-repo/gan-sr)**  
-Leveraged generative adversarial networks for single-step SR, focusing on producing photorealistic outputs in challenging scenarios.
-
----
 
 ## 🎬 Overview
 ![overview](asserts/framework.jpg)
