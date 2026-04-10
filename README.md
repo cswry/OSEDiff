@@ -109,6 +109,10 @@ python test_osediff.py \
 --align_method nofix 
 ```
 
+For running the inference using Colab, please visit the link below.
+
+<a href="https://colab.research.google.com/github/nuwandda/OSEDiff/blob/main/OSEDiff_Notebook.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+
 ## 🚀 Calculate Inference Time
 For easy comparison, we provide the inference time testing script for osediff.
 ```
